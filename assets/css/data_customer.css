@@ -1,0 +1,47 @@
+ h1 {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow-x: auto;
+        }
+
+        th, td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }

@@ -1,0 +1,101 @@
+
+                    .detail-pesanan {
+                        background-color: #f8f9fc;
+                        border-radius: 10px;
+                        padding: 20px;
+                        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+                    }
+                    
+                    .info-section {
+                        margin-bottom: 20px;
+                    }
+                    
+                    .info-header {
+                        border-bottom: 2px solid #4e73df;
+                        padding-bottom: 10px;
+                        margin-bottom: 15px;
+                        color: #4e73df;
+                        font-weight: 600;
+                    }
+                    
+                    .info-item {
+                        padding: 8px 0;
+                        border-bottom: 1px dashed #e3e6f0;
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    
+                    .info-label {
+                        width: 170px;
+                        font-weight: 600;
+                        color: #5a5c69;
+                    }
+                    
+                    .info-value {
+                        flex: 1;
+                        color: #3a3b45;
+                    }
+                    
+                    .status-badge {
+                        padding: 5px 15px;
+                        border-radius: 30px;
+                        font-weight: 600;
+                        letter-spacing: 0.5px;
+                        font-size: 12px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-width: 100px;
+                    }
+                    
+                    .status-badge.pending {
+                        background-color: #FFC107;
+                        color: #000;
+                        border-left: 4px solid #FF9800;
+                    }
+                    
+                    .status-badge.proses {
+                        background-color: #17A2B8;
+                        color: #fff;
+                        border-left: 4px solid #0069d9;
+                    }
+                    
+                    .status-badge.kirim {
+                        background-color: #28A745;
+                        color: #fff;
+                        border-left: 4px solid #1e7e34;
+                    }
+                    
+                    .total-section {
+                        background-color: #4e73df;
+                        color: white;
+                        padding: 15px;
+                        border-radius: 8px;
+                        margin-top: 20px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-align: right;
+                    }
+                    
+                    .product-image {
+                        width: 70px;
+                        height: 70px;
+                        object-fit: cover;
+                        border: 1px solid #e3e6f0;
+                        border-radius: 5px;
+                        transition: transform 0.3s;
+                    }
+                    
+                    .product-image:hover {
+                        transform: scale(1.2);
+                    }
+                    
+                    .product-table th {
+                        background-color: #4e73df;
+                        color: white;
+                        vertical-align: middle;
+                    }
+                    
+                    .product-table td {
+                        vertical-align: middle;
+                    }

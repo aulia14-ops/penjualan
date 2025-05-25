@@ -1,0 +1,231 @@
+:root {
+    --primary: #2C3E50;    /* Biru semu abu-abu gelap */
+    --secondary: #34495E;  /* Biru semu abu-abu lebih terang */
+    --accent: #000000;     /* Hitam */
+    --light: #ECF0F1;      /* Putih semu abu-abu sangat terang */
+    --white: #FFFFFF;      /* Putih */
+    --text-dark: #1A1A1A;  /* Hitam untuk teks */
+    --text-light: #FFFFFF; /* Putih untuk teks */
+    --text-muted: #95A5A6; /* Abu-abu muda untuk teks sekunder */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--text-dark);
+    min-height: 3000px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-style: italic;
+    text-decoration: none;
+}
+
+.navbar .navbar-logo span {
+    color: var(--accent);
+}
+
+/* Navigasi utama */
+.navbar .navbar-nav {
+    display: flex;               /* penting untuk horizontal layout */
+    align-items: center;
+    gap: 1.5rem;                 /* jarak antar link */
+}
+
+/* Link dalam navbar */
+.navbar .navbar-nav a {
+    color: var(--primary);
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--accent);
+}
+
+/* Garis bawah animasi saat hover */
+.navbar .navbar-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Ikon tambahan di kanan */
+.navbar .navbar-extra {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar .navbar-extra a {
+    color: var(--primary);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--accent);
+}
+
+/* Hamburger disembunyikan */
+#hamburger-menu {
+    display: none;
+}
+
+/* Products Section */
+.products {
+    background-color: var(--light);
+}
+
+.products p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.products .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.product-card {
+    width: 300px;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card .product-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-card .product-title {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.product-card .product-price {
+    font-size: 1.3rem;
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-quantity {
+    margin-bottom: 1rem;
+}
+
+.quantity-input {
+    width: 60px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.product-card .product-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.product-card .product-buttons a, 
+.product-card .product-buttons button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card .btn-detail {
+    background-color: var(--light);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.product-card .btn-buy {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.product-card .btn-cart {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.product-card .btn-detail:hover,
+.product-card .btn-buy:hover, 
+.product-card .btn-cart:hover {
+    opacity: 0.8;
+}
