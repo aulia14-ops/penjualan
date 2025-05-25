@@ -64,10 +64,6 @@ public function index()
     $this->load->view('templates/user_footer');
 }
 
-
-
-
-
     public function produk()
     {
         $this->load->model('ModelProduk'); // <-- load model Produk_model
@@ -128,8 +124,6 @@ public function beli_langsung()
     // Redirect ke halaman review checkout (agar semua logika tetap konsisten)
     redirect('user/checkout_review');
 }
-
-
 
    // Menampilkan halaman keranjang
 public function keranjang()
